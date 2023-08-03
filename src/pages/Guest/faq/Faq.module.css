@@ -1,0 +1,114 @@
+.faq {
+    padding: 100px 0;
+
+    width: 100%;
+    height: fit-content;
+    background-image: url("../../../img/Guest/cars/car_red.png");
+    background-repeat: no-repeat;
+    background-position: bottom 100px left 0;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 10px;
+
+    width: 100%;
+    height: fit-content;
+    max-width: 1500px;
+    padding: 0 5%;
+}
+.container > h2 {
+    font-size: 24px;
+    font-weight: 600;
+
+    text-align: center;
+}
+.container > h1 {
+    font-size: 38px;
+
+    text-align: center;
+}
+.container > p {
+    font-size: 16px;
+    max-width: 60%;
+    color: rgba(0,0,0,0.7);
+
+    text-align: center;
+}
+.questions {
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    height: fit-content;
+
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+}
+.option {
+    display: flex;
+    align-items: center;
+    padding: 20px 5%;
+
+    width: 100%;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    background-color: white;
+    font-size: 20px;
+
+    transition: var(--transition-slow);
+}
+.option span {
+    font-size: 30px;
+    font-variation-settings: 'wght' 500;
+}
+.option:nth-child(1), .option:nth-child(3) {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.expand {
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: 0fr;
+    background-color: white;
+
+    transition: var(--transition-slow);
+}
+.expand > * {
+    overflow: hidden;
+    padding: 0 40px;
+
+    color: rgba(0,0,0,0.7);
+}
+.expandShow {
+    grid-template-rows: 1fr;
+    padding: 40px 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.active {
+    color: white;
+    background-color: var(--accent-color);
+    box-shadow: var(--box-shadow);
+}
+
+
+@media (max-width: 900px) {
+    .faq {
+        padding: 50px 0;
+    }
+    .option {
+        font-size: 16px;
+    }
+    .expand > * {
+        padding: 0 20px;
+    }
+    .expandShow {
+        padding: 20px 20px;
+    }
+}

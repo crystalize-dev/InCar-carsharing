@@ -1,0 +1,113 @@
+.wrapper {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow-y: scroll;
+}
+.wrapper::-webkit-scrollbar {
+    width: 10px;
+
+    background: #f6f6f7;
+}
+.wrapper::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+}
+
+.container {
+    margin: 0 auto;
+
+    padding: 0 5%;
+
+    max-width: 1500px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    width: 100%;
+    height: fit-content;
+
+    padding-bottom: 100px;
+}
+.background {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    object-fit: scale-down;
+
+    z-index: -1;
+}
+.arrowUp {
+    position: absolute;
+    right: 60px;
+    bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    color: white;
+    outline: 5px solid white;
+
+    background-color: var(--accent-color);
+    z-index: 99999;
+}
+.hideArrow {
+    filter: opacity(0);
+}
+
+.delimiter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 300px;
+
+    color: white;
+    text-align: center;
+
+    background-color: #2d2d2e;
+}
+.delimiter h1 {
+    font-size: 46px;
+}
+.delimiter h2 {
+    font-size: 26px;
+    font-weight: normal;
+}
+.delimiter span {
+    color: var(--accent-color);
+}
+
+
+@media (max-width: 1200px) {
+    .arrowUp {
+        right: 20px;
+        bottom: 20px;
+    }
+    .background {
+        display: none;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 900px) {
+    .delimiter h1 {
+        font-size: 42px;
+    }
+    .delimiter h2 {
+        font-size: 22px;
+    }
+}

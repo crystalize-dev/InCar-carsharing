@@ -1,0 +1,125 @@
+.test {
+    padding: 100px 0;
+    width: 100%;
+    height: fit-content;
+
+    background-color: #f6f6f7;
+}
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 1500px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+.test > div > h2 {
+    font-size: 24px;
+    font-weight: 600;
+
+    text-align: center;
+}
+.test > div > h1 {
+    font-size: 38px;
+
+    text-align: center;
+}
+.test > div > p {
+    font-size: 16px;
+    max-width: 60%;
+    color: rgba(0,0,0,0.7);
+    text-align: center;
+}
+.cardsArea {
+    margin-top: 50px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    width: 90%;
+    height: fit-content;
+}
+.card {
+    padding: 50px;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 50%;
+    flex-grow: 1;
+    gap: 10px;
+
+    height: 350px;
+
+    box-shadow: 0 0 15px 10px rgba(0,0,0,0.05);
+}
+.card p {
+    font-size: 24px;
+    font-weight: normal;
+}
+.cardImg {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+    white-space: nowrap;
+}
+.cardImg h1 {
+    font-size: 18px;
+}
+.cardImg h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+.cardImg img {
+    --size: 70px;
+
+    height: var(--size);
+    min-width: var(--size);
+    width: var(--size);
+    min-height: var(--size);
+    border-radius: 50%;
+}
+.card span {
+    color: var(--accent-color);
+    font-size: calc(50px + 2vw);
+    margin-left: auto;
+}
+
+@media (max-width: 1200px) {
+    .card p {
+        font-size: 18px;
+    }
+    .cardImg img {
+        --size: 50px;
+    }
+    .cardImg h1 {
+        font-size: 16px;
+    }
+    .cardImg h2 {
+        font-size: 14px;
+    }
+    .card span {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .test > p {
+        font-size: 16px;
+        max-width: 80%;
+        color: rgba(0,0,0,0.7);
+    }
+    .cardsArea {
+        flex-direction: column;
+    }
+    .card {
+        max-width: unset;
+        height: fit-content;
+    }
+}

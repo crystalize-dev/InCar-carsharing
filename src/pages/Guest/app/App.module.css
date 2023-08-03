@@ -1,0 +1,70 @@
+.app {
+    position: relative;
+
+    width: 100%;
+    height: 550px;
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f6f6f7;
+    z-index: 10;
+}
+.app > img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    height: 98%;
+    z-index: 11;
+}
+.textArea {
+    padding: 0 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+    z-index: 12;
+}
+.textArea h1 {
+    font-size: 42px;
+    max-width: 50%;
+}
+.textArea p {
+    max-width: 40%;
+    font-size: 14px;
+    color: rgba(0,0,0,0.7);
+}
+.btnArea {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+@media (max-width: 1200px) {
+    .app > img {
+        display: none;
+    }
+    .textArea {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media (max-width: 900px) {
+    .textArea h1 {
+        max-width: 80%;
+    }
+    .textArea p {
+        max-width: 80%;
+    }
+    .btnArea {
+        gap: 10px;
+    }
+    .btnArea > a > img {
+        width: 190px;
+    }
+}

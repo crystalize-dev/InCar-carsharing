@@ -1,0 +1,143 @@
+.whyUs {
+    position: relative;
+
+    padding: 70px;
+
+    width: 100%;
+    height: fit-content;
+}
+.wheels {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 50%;
+    z-index: -1;
+}
+.container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 5%;
+    max-width: 1500px;
+}
+.header {
+    object-fit: scale-down;
+    width: 100%;
+}
+.whyUsText {
+    display: flex;
+    gap: 40px;
+
+    width: 100%;
+    height: fit-content;
+}
+.leftBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 5% 5%;
+
+    height: 100%;
+    width: 60%;
+}
+.leftBlock h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+.leftBlock h1 {
+    font-size: 42px;
+}
+.leftBlock p {
+    color: rgba(0,0,0,0.6);
+}
+.leftBlock a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-top: 40px;
+
+    width: fit-content;
+    padding: 15px 20px;
+
+    box-shadow: var(--box-shadow);
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    color: white;
+}
+.rightBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    padding: 5% 0;
+
+    height: 100%;
+    width: 40%;
+}
+.whyElem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    width: fit-content;
+    height: fit-content;
+}
+.whyElemText {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.whyElemText p {
+    color: rgba(0,0,0,0.6);
+}
+.whyElem img {
+    object-fit: scale-down;
+    width: 150px;
+}
+
+
+@media (max-width: 1200px) {
+    .whyUs {
+        padding: 50px 0;
+    }
+    .whyUsText {
+        flex-direction: column;
+    }
+    .leftBlock {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding: 40px;
+    }
+    .leftBlock h1 {
+        font-size: 34px;
+    }
+    .rightBlock {
+        width: 100%;
+        padding: unset;
+        gap: 40px;
+
+        text-align: center;
+    }
+    .whyElem {
+        width: 400px;
+    }
+    .wheels {
+        width: 80%;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 900px) {
+    .wheels {
+        display: none;
+    }
+}

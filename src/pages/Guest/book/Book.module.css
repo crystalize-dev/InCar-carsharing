@@ -1,0 +1,374 @@
+.book {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 40px 60px;
+
+    width: 100%;
+    height: fit-content;
+
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.05);
+
+    background-image: url("../../../img/Guest/bookBackground.png");
+}
+.book form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.book:target {
+    scroll-margin-top: 300px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 30px;
+
+    width: 100%;
+    height: fit-content;
+}
+.bookElem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 33.3%;
+}
+.bookElem span {
+    color: var(--accent-color);
+}
+.textHeader h1 {
+    font-weight: 600;
+    font-size: 18px;
+}
+.textHeader {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+}
+.row button {
+    align-self: flex-end;
+    width: 33.3%;
+    height: 50px;
+
+    background-color: var(--accent-color);
+    box-shadow: var(--box-shadow);
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+.bookElem select, .bookElem input {
+    padding: 10px;
+    height: 50px;
+    outline: none;
+
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    color: rgba(0,0,0,0.3);
+}
+.bookElem select option:nth-child(1) {
+    color: rgba(0,0,0,0.2);
+}
+.bookElem select option:not(:nth-child(1)) {
+    color: black;
+}
+.notification {
+    margin: 20px 0;
+
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+}
+.notification span {
+    cursor: pointer;
+}
+.notification[data-color="green"] {
+    background-color: #c1f8bd;
+    color: #2a6718;
+}
+.notification[data-color="red"] {
+    background-color: #f6d5d9;
+    color: #711c25;
+}
+
+.modalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.3);
+}
+.modalWindow {
+    --header1-height: 60px;
+    --header2-height: 150px;
+    --window-height: 98%;
+
+    position: relative;
+
+    width: 800px;
+    height: var(--window-height);
+
+    background-color: #fdfdfe;
+}
+.modalHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    width: 100%;
+    height: var(--header1-height);
+
+    color: white;
+    background-color: var(--accent-color);
+}
+.modalHeader span {
+    cursor: pointer;
+    font-size: 30px;
+    font-variation-settings: 'wght' 600;
+}
+.modalHeaderNotification {
+    position: absolute;
+    left: 0;
+    top: var(--header1-height);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 10px 20px;
+
+    width: 100%;
+    height: var(--header2-height);
+
+    background-color: #fde8e5;
+}
+.modalHeaderNotification h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    color: var(--accent-color);
+}
+.modalHeaderNotification p {
+    color: rgba(0,0,0,0.5);
+    font-size: 18px;
+    font-weight: 600;
+}
+.modalContent {
+    margin-top: calc(var(--header1-height) + var(--header2-height));
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: calc(var(--window-height) - var(--header1-height) - var(--header2-height));
+
+    overflow-y: scroll;
+}
+.modalContent::-webkit-scrollbar {
+    width: 10px;
+
+    background: white;
+}
+.modalContent::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+}
+.preview {
+    display: flex;
+
+    width: 100%;
+    height: fit-content;
+
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.textBlock, .previewImg {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+    width: 50%;
+    height: 100%;
+}
+.textBlock > h1, .personalInfo > h1 {
+    color: var(--accent-color);
+    font-size: 18px;
+}
+.textBlock {
+    gap: 30px;
+}
+.previewElem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.elemHeader, .addInfo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+.addInfo {
+    color: gray;
+    margin-left: 28px;
+}
+.addInfo input {
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    color: rgba(0,0,0,0.3);
+}
+.elemHeader > * {
+    font-size: 18px;
+}
+.elemHeader span {
+    color: gray;
+}
+.previewImg h1 {
+    font-size: 18px;
+}
+.previewImg h1 span {
+    color: var(--accent-color);
+}
+.personalInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+
+    width: 100%;
+    height: fit-content;
+}
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    height: fit-content;
+}
+.infoElem {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    width: 48%;
+}
+.infoElem h1 {
+    font-size: 20px;
+    font-weight: normal;
+    color: gray;
+}
+.infoElem h1 span {
+    color: var(--accent-color);
+}
+.infoElem input {
+    padding: 10px 15px;
+
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    outline: none;
+
+    background-color: #d9d9da;
+}
+.submit {
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 50px;
+}
+.submit button {
+    padding: 10px 15px;
+    font-size: 22px;
+
+    border: none;
+
+    background-color: var(--accent-color);
+    color: white;
+
+    cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+    .book:target {
+        scroll-margin-top: 10px;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .bookElem {
+        width: 100%;
+    }
+    .row button {
+        align-self: center;
+        width: 100%;
+    }
+
+    .modalWindow {
+        width: 100%;
+        --window-height: 100%;
+    }
+    .modalHeaderNotification h1 {
+        font-size: 18px;
+    }
+    .modalHeaderNotification p {
+        font-size: 16px;
+    }
+    .textBlock, .previewImg {
+        width: 55%;
+    }
+    .previewImg {
+        width: 45%;
+    }
+    .elemHeader > * {
+        font-size: 14px;
+    }
+    .addInfo input {
+        padding: 3px;
+    }
+    .addInfo p {
+        font-size: 14px;
+    }
+    .infoElem {
+        width: 47%;
+    }
+    .submit input + label {
+        font-size: calc(10px + 0.5vw);
+    }
+    .submit button {
+        font-size: 16px;
+    }
+}
