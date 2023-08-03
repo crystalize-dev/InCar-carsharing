@@ -8,7 +8,8 @@ import {getCar} from "../../../utility/cars";
 import CheckBox from "../../../components/Inputs/inputCheckBox/checkBox";
 
 
-const Book = ({id, modal, setModal}) => {
+const Book = ({id}) => {
+    const [modal, setModal] = useState(null) // modalWindow in #book section
     const [notification, setNotification] = useState("")
 
     const submitFirst = e => {

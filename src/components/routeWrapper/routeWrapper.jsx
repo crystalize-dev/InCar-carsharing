@@ -1,12 +1,15 @@
 import React from 'react';
 import cl from "./routeWrapper.module.css"
+import {Outlet} from "react-router-dom"
 
 
 const RouteWrapper = () => {
     return (
-        <div>
-            wrapper
-        </div>
+        <>
+            i'm wrapper !
+
+            <Outlet />
+        </>
     );
 };
 

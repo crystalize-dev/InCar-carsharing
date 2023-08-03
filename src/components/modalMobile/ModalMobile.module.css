@@ -41,4 +41,12 @@
     .show {
         left: 0;
     }
+    .modalMobile a:last-child {
+        display: none;
+    }
+}
+@media (max-width: 900px) {
+    .modalMobile a:last-child {
+        display: unset;
+    }
 }

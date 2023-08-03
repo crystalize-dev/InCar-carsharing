@@ -2,6 +2,7 @@ import React from 'react';
 import cl from "./Header.module.css"
 import {images} from "../../img/Guest/img";
 import Icon from "../Icon/icon";
+import {Link} from "react-router-dom";
 
 
 const Header = ({id, header, setMenu}) => {
@@ -10,12 +11,12 @@ const Header = ({id, header, setMenu}) => {
             <img alt="logo" src={images.logo} draggable={false}/>
 
             <div className={cl.navigation}>
-                <a href={"home"}>Home</a>
-                <a href={"about"}>About</a>
-                <a href={"models"}>Models</a>
-                <a href={"testimonials"}>Testimonials</a>
-                <a href={"team"}>Our team</a>
-                <a href={"contact"}>Contact</a>
+                <Link to={"/"}>Home</Link>
+                <Link to={"about"}>About</Link>
+                <Link to={"models"}>Models</Link>
+                <Link to={"testimonials"}>Testimonials</Link>
+                <Link to={"team"}>Our team</Link>
+                <Link to={"contact"}>Contact</Link>
             </div>
 
             <div className={cl.btnsArea}>

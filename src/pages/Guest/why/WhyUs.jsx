@@ -4,6 +4,7 @@ import MySection from "../../../components/section/MySection";
 import {images} from "../../../img/Guest/img";
 import {cars} from "../../../img/Guest/cars/cars";
 import Icon from "../../../components/Icon/icon";
+import {Link} from "react-router-dom";
 
 
 const WhyUs = ({id}) => {
@@ -24,7 +25,7 @@ const WhyUs = ({id}) => {
                             designed to give you the ultimate renting experience, so don't miss out on your
                             chance to save big</p>
 
-                        <a href={"#home"}>Find details<Icon>chevron_right</Icon></a>
+                        <Link to={"about"}>Find details<Icon>chevron_right</Icon></Link>
                     </div>
                     <div className={cl.rightBlock}>
                         <div className={cl.whyElem}>

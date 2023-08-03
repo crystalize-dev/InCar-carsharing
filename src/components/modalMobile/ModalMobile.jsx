@@ -2,6 +2,7 @@ import React from 'react';
 import cl from "./ModalMobile.module.css"
 import classnames from "classnames";
 import Icon from "../Icon/icon";
+import {Link} from "react-router-dom";
 
 
 const ModalMobile = ({menu, setMenu}) => {
@@ -9,13 +10,13 @@ const ModalMobile = ({menu, setMenu}) => {
         <div className={menu ? classnames(cl.modalMobile, cl.show) : cl.modalMobile}>
             <Icon onClick={() => setMenu(false)}>close</Icon>
 
-            <a onClick={() => setMenu(false)} href={"#home"}>Home</a>
-            <a onClick={() => setMenu(false)} href={"#about"}>About</a>
-            <a onClick={() => setMenu(false)} href={"#models"}>Models</a>
-            <a onClick={() => setMenu(false)} href={"#testimonials"}>Testimonials</a>
-            <a onClick={() => setMenu(false)} href={"#team"}>Our team</a>
-            <a onClick={() => setMenu(false)} href={"#contact"}>Contact</a>
-            <a onClick={() => setMenu(false)} href={"#contact"}>Sign In</a>
+            <Link onClick={() => setMenu(false)} to={"/"}>Home</Link>
+            <Link onClick={() => setMenu(false)} to={"about"}>About</Link>
+            <Link onClick={() => setMenu(false)} to={"models"}>Models</Link>
+            <Link onClick={() => setMenu(false)} to={"testimonials"}>Testimonials</Link>
+            <Link onClick={() => setMenu(false)} to={"team"}>Our team</Link>
+            <Link onClick={() => setMenu(false)} to={"contact"}>Contact</Link>
+            <a onClick={() => setMenu(false)} href={"#start"}>Sign In</a>
         </div>
     );
 };

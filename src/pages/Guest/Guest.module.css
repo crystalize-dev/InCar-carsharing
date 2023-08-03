@@ -1,20 +1,3 @@
-.wrapper {
-    position: relative;
-
-    width: 100vw;
-    height: 100vh;
-
-    overflow-y: scroll;
-}
-.wrapper::-webkit-scrollbar {
-    width: 10px;
-
-    background: #f6f6f7;
-}
-.wrapper::-webkit-scrollbar-thumb {
-    background: var(--accent-color);
-}
-
 .container {
     margin: 0 auto;
 
@@ -41,27 +24,6 @@
     object-fit: scale-down;
 
     z-index: -1;
-}
-.arrowUp {
-    position: absolute;
-    right: 60px;
-    bottom: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 40px;
-    height: 40px;
-
-    color: white;
-    outline: 5px solid white;
-
-    background-color: var(--accent-color);
-    z-index: 99999;
-}
-.hideArrow {
-    filter: opacity(0);
 }
 
 .delimiter {
@@ -91,10 +53,6 @@
 
 
 @media (max-width: 1200px) {
-    .arrowUp {
-        right: 20px;
-        bottom: 20px;
-    }
     .background {
         display: none;
     }

@@ -2,6 +2,7 @@ import React from 'react';
 import cl from "./Home.module.css"
 import Icon from "../../../components/Icon/icon";
 import {cars} from "../../../img/Guest/cars/cars";
+import {Link} from "react-router-dom";
 
 
 const Home = ({id}) => {
@@ -15,7 +16,7 @@ const Home = ({id}) => {
                     <a href={"#book"}>
                         <button>Book Ride <Icon>check_circle</Icon></button>
                     </a>
-                    <button>Learn More<Icon>chevron_right</Icon></button>
+                        <Link to="about">Learn More<Icon>chevron_right</Icon></Link>
                 </div>
             </div>
 

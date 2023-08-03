@@ -57,14 +57,28 @@
     background-color: var(--accent-color);
     box-shadow: var(--box-shadow);
 }
-.homeBtns button:nth-child(2) {
+.homeBtns a:nth-child(2) {
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 18px;
+    border-radius: 3px;
+
+    cursor: pointer;
+
+    color: white;
     border: 2px solid black;
     background-color: black;
+
+    transition: var(--transition-slow);
 }
-.homeBtns button:nth-child(2):hover {
-    background-color: transparent;
+.homeBtns a:nth-child(2):hover {
+    background-color: white;
     color: black;
 }
+
 .home img {
     object-fit: scale-down;
     width: 60%;
