@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import cl from "./Book.module.css"
 
 import Icon from "../../../components/Icon/icon";
-import MySelect from "../../../components/select/MySelect";
+import MySelect from "../../../components/Inputs/select/MySelect";
 import MyInput from "../../../components/Inputs/input/MyInput";
 import {getCar} from "../../../utility/cars";
 import CheckBox from "../../../components/Inputs/inputCheckBox/checkBox";

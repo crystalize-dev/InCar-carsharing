@@ -5,7 +5,13 @@ import Icon from "../Icon/icon";
 import {Link} from "react-router-dom";
 
 
-const Header = ({id, header, setMenu}) => {
+const Header = ({id, header, setMenu, setModal, setType}) => {
+
+    const openForm = (type) => {
+        setModal(true)
+        setType(type)
+    }
+
     return (
         <header id={id} ref={header} className={cl.header}>
             <img alt="logo" src={images.logo} draggable={false}/>
@@ -22,8 +28,8 @@ const Header = ({id, header, setMenu}) => {
             <div className={cl.btnsArea}>
                 <Icon onClick={() => setMenu(true)}>menu</Icon>
 
-                <button>Sign In</button>
-                <button>Register</button>
+                <button onClick={() => openForm('login')}>Sign In</button>
+                <button onClick={() => openForm('register')}>Register</button>
             </div>
         </header>
     );

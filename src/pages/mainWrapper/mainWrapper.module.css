@@ -28,7 +28,7 @@
     height: 40px;
 
     color: white;
-    outline: 5px solid white;
+    outline: 3px solid white;
 
     background-color: var(--accent-color);
     z-index: 999;

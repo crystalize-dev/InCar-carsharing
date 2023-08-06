@@ -2,7 +2,7 @@ import React from 'react';
 import cl from "./Contact.module.css"
 import Icon from "../../components/Icon/icon";
 import MyInput from "../../components/Inputs/input/MyInput";
-import MyTextArea from "../../components/textArea/MyTextArea";
+import MyTextArea from "../../components/Inputs/textArea/MyTextArea";
 
 
 const Contact = () => {

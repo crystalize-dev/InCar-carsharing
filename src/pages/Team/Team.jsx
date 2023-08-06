@@ -1,7 +1,7 @@
 import React from 'react';
 import cl from "./Team.module.css"
 import {teamInfo} from "../../utility/hardcode/team";
-import EmployeeCard from "../../components/employeeCard/EmployeeCard";
+import EmployeeCard from "../../components/Cards/employeeCard/EmployeeCard";
 
 
 const Team = () => {

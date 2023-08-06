@@ -1,9 +1,13 @@
 import React from 'react';
 import cl from "./modelCard.module.css"
-import Icon from "../Icon/icon";
+import Icon from "../../Icon/icon";
+import {useNavigate} from "react-router-dom"
 
 
 const ModelCard = ({src, cost, model, doors, transmission, gas}) => {
+
+    const navigate = useNavigate()
+
     return (
         <div className={cl.card}>
             <img alt={"preview"} src={src}/>
@@ -46,7 +50,7 @@ const ModelCard = ({src, cost, model, doors, transmission, gas}) => {
 
             <hr/>
 
-            <button>Book Ride</button>
+            <button onClick={() => navigate("/?where=book")}>Book Ride</button>
         </div>
     );
 };

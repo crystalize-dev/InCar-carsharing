@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import cl from "./Guest.module.css"
 
 import {images} from "../../img/Guest/img";
@@ -10,9 +10,17 @@ import WhyUs from "./why/WhyUs";
 import Testimonials from "./testimonials/Testimonials";
 import Faq from "./faq/Faq";
 import App from "./app/App";
+import {useSearchParams} from "react-router-dom";
 
 
 const Guest = () => {
+    const params = useSearchParams()
+
+    useEffect(() => {
+        let header = document.getElementById('book')
+        if (params[0].get('where') === 'book') header.scrollIntoView()
+    }, [params])
+
     return (
         <>
             <div className={cl.container}>

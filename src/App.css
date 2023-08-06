@@ -12,8 +12,9 @@ a {
 img, a, button {
     user-select: none;
 }
-button {
+button, input {
     outline: none;
+    border-radius: 3px;
 }
 
 #root {

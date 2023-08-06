@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import cl from "./MyInput.module.css"
 
 
-const MyInput = ({name, type, placeholder}) => {
+const MyInput = ({name, type, placeholder, autocomplete}) => {
     const [value, setValue] = useState("")
     const [active, setActive] = useState(false)
 
@@ -21,7 +21,8 @@ const MyInput = ({name, type, placeholder}) => {
                className={active ? cl.active : null}
                type={type}
                value={value} onChange={e => changeActive(e)}
-               placeholder={placeholder} />
+               placeholder={placeholder}
+               autoComplete={autocomplete} />
     );
 };
 
