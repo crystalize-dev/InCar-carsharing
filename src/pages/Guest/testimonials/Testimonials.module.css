@@ -109,7 +109,7 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
     .test > p {
         font-size: 16px;
         max-width: 80%;

@@ -1,3 +1,3 @@
 # ToDo:
 
-- Final tests
+- Mobile resolution

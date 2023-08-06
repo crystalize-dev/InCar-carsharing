@@ -73,7 +73,7 @@
         max-width: 60%;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 980px) {
     .wrapper {
         padding: 20px 5%;
     }
