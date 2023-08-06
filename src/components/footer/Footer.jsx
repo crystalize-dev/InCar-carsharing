@@ -13,8 +13,8 @@ const Footer = ({id}) => {
                     <p>We offers a big range of vehicles for all your driving needs. We have the perfect car to meet your
                         needs</p>
 
-                    <a href={"tel:89772954635"} className={cl.contactElem}><Icon>call</Icon>+7 (977) 295-46-35</a>
-                    <a href={"mailto:man2123@mail.ru"} className={cl.contactElem}><Icon>mail</Icon>man2123@mail.ru</a>
+                    <a href={"tel:+71234567869"} className={cl.contactElem}><Icon>call</Icon>+7 (123) 456-78-69</a>
+                    <a href={"mailto:incar@gmail.com"} className={cl.contactElem}><Icon>mail</Icon>incar@gmail.com</a>
                 </div>
                 <div className={cl.block}>
                     <h1>COMPANY</h1>

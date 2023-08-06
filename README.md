@@ -1,6 +1,7 @@
 # ToDo:
 
 - modal login form
-- routeWrapper
-- pages
+- book Ride button on Models page
+- notification in footer
+- notification on Contact page
 - Small beauty fixes

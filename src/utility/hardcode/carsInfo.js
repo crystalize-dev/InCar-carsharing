@@ -1,8 +1,10 @@
 import {cars} from "../../img/Guest/cars/cars";
+import {carsAlt} from "../../img/Models/carsAlt";
 
 
 export const carsInfo = [
     {
+        imgAlt: carsAlt.audi,
         img: cars.audi,
         fullName: "Audi A1 S-Line",
         model: "Audi",
@@ -14,6 +16,7 @@ export const carsInfo = [
         transmission: "Manual",
         fuel: "Gasoline"},
     {
+        imgAlt: carsAlt.golf,
         img: cars.vwGolf,
         fullName: "VW Golf 6",
         model: "Golf 6",
@@ -25,6 +28,7 @@ export const carsInfo = [
         transmission: "Manual",
         fuel: "Diesel"},
     {
+        imgAlt: carsAlt.toyota,
         img: cars.camry,
         fullName: "Toyota Camry",
         model: "Camry",
@@ -36,6 +40,7 @@ export const carsInfo = [
         transmission: "Automatic",
         fuel: "Hybrid"},
     {
+        imgAlt: carsAlt.bmw,
         img: cars.bmw,
         fullName: "BMW 320 ModernLine",
         model: "320",
@@ -47,6 +52,7 @@ export const carsInfo = [
         transmission: "Manual",
         fuel: "Diesel"},
     {
+        imgAlt: carsAlt.mercedes,
         img: cars.mercedes,
         fullName: "Mercedes-Benz GLK",
         model: "Benz GLK",
@@ -58,6 +64,7 @@ export const carsInfo = [
         transmission: "Manual",
         fuel: "Diesel"},
     {
+        imgAlt: carsAlt.passat,
         img: cars.vwPass,
         fullName: "VW Passat CC",
         model: "Passat CC",

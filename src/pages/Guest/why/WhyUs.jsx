@@ -25,7 +25,7 @@ const WhyUs = ({id}) => {
                             designed to give you the ultimate renting experience, so don't miss out on your
                             chance to save big</p>
 
-                        <Link to={"about"}>Find details<Icon>chevron_right</Icon></Link>
+                        <Link to={"about#start"}>Find details<Icon>chevron_right</Icon></Link>
                     </div>
                     <div className={cl.rightBlock}>
                         <div className={cl.whyElem}>
