@@ -1,5 +1,7 @@
-<div align='center'><img alt="" style="width:40%" src='./src/img/logo.png'/></div>
-
+<div align='center'>
+<h1><span style="color: #fd4c31">In</span>Car</h1>
+<img alt="" style="width:15%" src='./public/logoRound.png'/>
+</div>
 <h2>About the project</h2>
 
   <p>A <b>InCar</b> website is an online platform that allows users to rent cars for personal or business use. The website provides an easy-to-use interface for searching, comparing, and reserving cars from a wide selection of vehicles that vary in make, model, size, and price.</p>
