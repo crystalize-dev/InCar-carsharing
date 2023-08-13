@@ -17,25 +17,25 @@
 </div>
 
 <h3 align='center'>About Page 📃</h3>
-
+<hr/>
 <div align='center'>
 <img alt="" src='src/img/Capture/AboutPageCapture.png'/>
 </div>
 
 <h3 align='center'>Models Page 🚓</h3>
-
+<hr/>
 <div align='center'>
 <img alt="" src='src/img/Capture/ModelsPageCapture.png'/>
 </div>
 
 <h3 align='center'>Team Page 👨‍</h3>
-
+<hr/>
 <div align='center'>
 <img alt="" src='src/img/Capture/TeamPageCapture.png'/>
 </div>
 
 <h3 align='center'>Contact Page 📱‍</h3>
-
+<hr/>
 <div align='center'>
 <img alt="" src='src/img/Capture/ContactPageCapture.png'/>
 </div>
