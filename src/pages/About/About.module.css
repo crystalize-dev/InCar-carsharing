@@ -6,9 +6,9 @@
     flex-direction: column;
     gap: 50px;
 
-    max-width: 1500px;
-    padding: 100px 5%;
     margin: 0 auto;
+    max-width: 133rem;
+    padding: 100px 2.5rem;
 }
 
 .aboutBlock {
@@ -31,10 +31,11 @@
     font-weight: 600;
 }
 .textArea h1 {
-    font-size: 40px;
+    font-size: var(--h2-size);
 }
 .textArea p {
-    color: rgba(0,0,0,0.7);
+    color: var(--text-gray);
+    font-size: var(--p-size);
 }
 
 .optionsBlock {
@@ -59,7 +60,7 @@
 }
 .optionsElem p span {
     font-weight: bold;
-    font-size: 36px;
+    font-size: var(--h2-size);
     color: black;
 }
 
@@ -67,17 +68,31 @@
     .aboutBlock {
         flex-direction: column;
         text-align: center;
-        gap: 40px;
     }
     .textArea {
         max-width: 60%;
     }
 }
 @media (max-width: 980px) {
+    .aboutBlock img {
+        width: 95%;
+    }
+    .textArea h1 {
+        font-size: var(--h3-size);
+    }
     .wrapper {
-        padding: 20px 5%;
+        padding: 30px 1rem;
     }
     .textArea {
-        max-width: unset;
+        max-width: 100%;
+    }
+    .optionsBlock {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .optionsElem img {
+        width:  60px;
+        height: 60px;
+        object-fit: scale-down;
     }
 }

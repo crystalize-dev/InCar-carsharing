@@ -4,38 +4,41 @@
     justify-content: space-between;
 
     width: 100%;
-    max-width: 1500px;
     height: 100px;
     min-height: 100px;
 
     background-color: transparent;
 
     margin: 0 auto;
-
-    padding: 0 5%;
+    max-width: 133rem;
+    padding: 2.7rem 2rem;
 }
 .header img {
-    height: 60%;
+    width: 20rem;
 }
 .header span {
     display: none;
     font-size: 30px;
+
     cursor: pointer;
+
     margin-right: 20px;
 }
 .navigation, .btnsArea {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 2.1rem;
 
     width: fit-content;
     height: 100%;
 }
 .navigation a {
-    color: var(--font-color-primary);
+    color: black;
+    font-size: var(--p-size);
+
     text-decoration: none;
     transition: var(--transition-fast);
-    font-weight: 600;
+    font-weight: 500;
 
     cursor: pointer;
 }
@@ -43,15 +46,16 @@
     color: var(--accent-color);
 }
 .btnsArea button {
-    padding: 10px 25px;
+    padding: var(--padding-btn);
 
     border: none;
     background-color: transparent;
+
     font-weight: 600;
-    font-size: 18px;
+    font-size: var(--p-size);
 
     transition: var(--transition-slow);
-    color: var(--font-color-primary);
+    color: black;
     cursor: pointer;
 }
 .btnsArea > *:nth-child(2):hover {
@@ -64,7 +68,7 @@
     color: white;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
     .header span {
         display: flex;
     }

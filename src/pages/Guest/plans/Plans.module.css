@@ -10,6 +10,10 @@
 }
 .infoArea img {
     width: 200px;
+    object-fit: scale-down;
+}
+.plan > h1 {
+    font-size: var(--h1-size);
 }
 .planElem {
     display: flex;
@@ -18,20 +22,22 @@
     gap: 15px;
 }
 .planElem h1 {
-    font-size: 20px;
+    font-size: var(--h3-size);
 }
 .planElem p {
-    font-size: 14px;
+    font-size: var(--p-size);
     max-width: 50%;
-    color: rgba(0,0,0,0.7);
+    color: var(--text-gray);
 }
 
 
 @media (max-width: 980px) {
-    .plan > h1 {
-        font-size: 34px;
-    }
     .infoArea {
+        margin-top: 0;
         flex-direction: column;
+    }
+    .planElem p {
+        max-width: 100%;
+        text-align: center;
     }
 }

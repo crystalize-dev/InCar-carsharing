@@ -15,7 +15,7 @@ const RouteWrapper = () => {
             <img alt={"background"} src={carBackground} draggable={false} className={cl.background}/>
 
             <div className={cl.header}>
-                <h1>{route.replace("/", "")}</h1>
+                <h2>{route.replace("/", "")}</h2>
                 <p><Link to={""}>Home</Link> {route}</p>
             </div>
 

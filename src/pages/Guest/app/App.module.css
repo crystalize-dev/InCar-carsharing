@@ -5,6 +5,8 @@
     height: 550px;
     min-height: 550px;
 
+    padding: 40px 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,16 +57,19 @@
     }
 }
 @media (max-width: 980px) {
+    .app {
+        height: fit-content;
+    }
     .textArea h1 {
-        max-width: 80%;
+        max-width: 100%;
     }
     .textArea p {
-        max-width: 80%;
+        max-width: 100%;
     }
     .btnArea {
         gap: 10px;
     }
     .btnArea > a > img {
-        width: 190px;
+        width: 100%;
     }
 }

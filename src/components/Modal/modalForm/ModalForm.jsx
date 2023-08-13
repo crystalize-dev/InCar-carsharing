@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import cl from "./ModalForm.module.css"
 import classnames from "classnames";
-import {other} from "../../../img/ModalForm/other";
+import {loginVia} from "../../../img/ModalForm/loginVia";
 import MyInput from "../../Inputs/input/MyInput";
 import Icon from "../../Icon/icon";
 
@@ -52,14 +52,14 @@ const ModalForm = ({modal, setModal, type, setType}) => {
                 <p className={cl.textDel}>Or {type === 'login' ? "sign in" : "register"} using</p>
                 <div className={cl.other}>
                     <a href={"https://google.com"} target="_blank" rel="noreferrer"> <img alt={"google"}
-                                                                                          src={other.google}
+                                                                                          src={loginVia.google}
                                                                                           draggable={false}/> </a>
-                    <a href={"https://facebook.com"} target="_blank" rel="noreferrer"> <img alt={"facebook"}
-                                                                                            src={other.facebook}
+                    <a href={"https://facebook.com/"} target="_blank" rel="noreferrer"> <img alt={"facebook"}
+                                                                                             src={loginVia.facebook}
+                                                                                             draggable={false}/> </a>
+                    <a href={"https://vk.com"} target="_blank" rel="noreferrer"> <img alt={"vk"}
+                                                                                            src={loginVia.vk}
                                                                                             draggable={false}/> </a>
-                    <a href={"https://twitter.com"} target="_blank" rel="noreferrer"> <img alt={"twitter"}
-                                                                                           src={other.twitter}
-                                                                                           draggable={false}/> </a>
                 </div>
 
                 <p className={cl.switch}>{type === 'login' ? "Don't" : "Already"} have an account?<span

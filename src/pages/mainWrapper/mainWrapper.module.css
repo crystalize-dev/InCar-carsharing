@@ -9,7 +9,7 @@
 .wrapper::-webkit-scrollbar {
     width: 10px;
 
-    background: #f6f6f7;
+    background: white;
 }
 .wrapper::-webkit-scrollbar-thumb {
     background: var(--accent-color);
@@ -42,5 +42,13 @@
     .arrowUp {
         right: 20px;
         bottom: 20px;
+    }
+}
+@media (max-width: 980px) {
+    .wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    .arrowUp {
+        display: none;
     }
 }

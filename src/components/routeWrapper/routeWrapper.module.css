@@ -14,8 +14,8 @@
 
 .header {
     margin: 0 auto;
-    padding: 5% 5%;
-    max-width: 1500px;
+    max-width: 133rem;
+    padding: 2.5rem 2.5rem;
 
     height: 320px;
     min-height: 320px;
@@ -27,14 +27,14 @@
 .header a:hover {
     color: var(--accent-color);
 }
-.header h1 {
-    font-size: 36px;
+.header h2 {
+    font-size: var(--h2-size);
 }
-.header h1:first-letter {
+.header h2:first-letter {
     text-transform: uppercase;
 }
 .header p {
-    font-size: 16px;
+    font-size: var(--p-size);
     font-weight: 600;
 }
 
@@ -67,7 +67,7 @@
     align-items: center;
     gap: 10px;
 
-    font-size: 36px;
+    font-size: var(--h2-size);
     font-weight: bold;
     font-variation-settings: 'wght' 800, 'FILL' 1;
 }
@@ -79,7 +79,7 @@
     .header {
         height: 250px;
         min-height: 250px;
-        padding: 50px 5%;
+        padding: 50px 2.5rem;
     }
     .background {
         height: 350px;
@@ -92,7 +92,7 @@
     }
 
     .footer p, .footer span {
-        font-size: 28px;
+        font-size: var(--h3-size);
     }
 }
 @media (max-width: 980px) {
@@ -105,5 +105,11 @@
     .background {
         height: 250px;
         min-height: 250px;
+    }
+    .header h2 {
+        font-size: var(--h3-size);
+    }
+    .header a:hover {
+        color: black;
     }
 }

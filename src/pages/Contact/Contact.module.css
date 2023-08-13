@@ -5,9 +5,9 @@
     width: 100%;
     height: fit-content;
 
-    max-width: 1500px;
-    padding: 100px 5%;
     margin: 0 auto;
+    max-width: 133rem;
+    padding: 100px 2.5rem;
 }
 
 .textArea {
@@ -18,12 +18,12 @@
     width: 40%;
 }
 .textArea h1 {
-    font-size: 38px;
+    font-size: var(--h1-size);
 }
 .textArea h2 {
     font-weight: normal;
-    color: rgba(0,0,0,0.6);
-    font-size: 16px;
+    color: var(--text-gray);
+    font-size: var(--p-size);
 }
 .textArea p, .textArea a {
     display: flex;
@@ -31,6 +31,7 @@
     gap: 20px;
 
     color: black;
+    font-size: var(--p-size);
 
     cursor: pointer;
     transition: var(--transition-slow);
@@ -49,8 +50,8 @@
     width: 50%;
 }
 .inputsArea h1 {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: var(--p-size);
+    font-weight: 500;
 }
 .inputsArea h1:not(:first-child), .inputsArea button {
     margin-top: 30px;
@@ -59,15 +60,14 @@
     color: var(--accent-color);
 }
 .inputsArea input, .inputsArea textarea {
-    padding: 10px 15px;
-
-    width: 100%;
+    padding: 1rem 2rem;
     height: 50px;
-
-    border: none;
     outline: none;
 
-    background-color: #f0f0f1;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    color: rgba(0,0,0,0.3);
+    background-color: transparent;
 }
 .inputsArea textarea {
     resize: vertical;
@@ -104,14 +104,17 @@
 
 @media (max-width: 1200px) {
     .wrapper {
-        padding: 50px 5%;
+        padding: 30px 2.5rem;
         flex-direction: column;
     }
     .textArea {
         width: 100%;
         text-align: center;
-        gap: 40px;
+        gap: 20px;
         align-items: center;
+    }
+    .textArea h1 {
+        font-size: var(--h2-size);
     }
     .inputsArea {
         margin-top: 50px;

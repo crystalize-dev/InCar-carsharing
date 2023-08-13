@@ -1,9 +1,7 @@
 .container {
     margin: 0 auto;
-
-    padding: 0 5%;
-
-    max-width: 1500px;
+    max-width: 133rem;
+    padding: 0 2.5rem;
 }
 
 .content {
@@ -34,6 +32,7 @@
 
     width: 100%;
     height: 300px;
+    gap: 20px;
 
     color: white;
     text-align: center;
@@ -41,10 +40,10 @@
     background-color: #2d2d2e;
 }
 .delimiter h1 {
-    font-size: 46px;
+    font-size: var(--h1-size);
 }
 .delimiter h2 {
-    font-size: 26px;
+    font-size: var(--h3-size);
     font-weight: normal;
 }
 .delimiter span {
@@ -63,9 +62,9 @@
 }
 @media (max-width: 980px) {
     .delimiter h1 {
-        font-size: 42px;
+        font-size: var(--h2-size);
     }
     .delimiter h2 {
-        font-size: 22px;
+        font-size: var(--p-size)
     }
 }

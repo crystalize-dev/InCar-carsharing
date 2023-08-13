@@ -3,7 +3,8 @@
     flex-direction: column;
     gap: 20px;
 
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: 610px;
 
     border: 1px solid rgba(0,0,0,0.3);
@@ -28,8 +29,8 @@
     align-items: center;
 }
 .row > div p {
-    color: rgba(0,0,0,0.5);
-    font-size: 16px;
+    color: var(--text-gray);
+    font-size: var(--p-size);
     font-weight: 600;
 }
 .row > div span {
@@ -72,7 +73,7 @@
     color: white;
     box-shadow: var(--box-shadow);
     font-weight: bold;
-    font-size: 16px;
+    font-size: var(--p-size);
 
     cursor: pointer;
 }

@@ -11,3 +11,13 @@
     max-width: 1200px;
     margin: 50px auto;
 }
+
+@media (max-width: 980px) {
+    .wrapper {
+        margin: 20px auto;
+
+        gap: 20px;
+
+        padding: 0 20px;
+    }
+}

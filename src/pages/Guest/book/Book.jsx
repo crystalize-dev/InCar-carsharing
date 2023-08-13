@@ -99,15 +99,15 @@ const Book = ({id}) => {
                         <div className={cl.bookElem}>
                             <div className={cl.textHeader}>
                                 <Icon>calendar_month</Icon>
-                                <h1> Pick-up <span>*</span></h1>
+                                <h1> Pick-up date<span>*</span></h1>
                             </div>
 
-                            <MyInput name={"pick-up-date"} type={"date"}/>
+                            <MyInput name={"pick-up-date"} type={"date"} />
                         </div>
                         <div className={cl.bookElem}>
                             <div className={cl.textHeader}>
                                 <Icon>calendar_month</Icon>
-                                <h1> Drop-of <span>*</span></h1>
+                                <h1> Drop-of date<span>*</span></h1>
                             </div>
 
                             <MyInput name={"drop-of-date"} type={"date"}/>

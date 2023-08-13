@@ -5,7 +5,7 @@
     flex-direction: column;
     gap: 40px;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
 
@@ -22,16 +22,16 @@
     right: 35px;
     top: 25px;
 
-    font-variation-settings: 'wght' 800;
-    font-size: 36px;
+    font-variation-settings: 'wght' 600;
+    font-size: 30px;
 
     cursor: pointer;
 }
 .modalMobile a {
     text-decoration: none;
     color: black;
-    font-size: 24px;
-    font-weight: 600;
+    font-size: var(--h4-size);
+    font-weight: 500;
 }
 
 @media (max-width: 1200px) {

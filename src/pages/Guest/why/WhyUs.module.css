@@ -15,10 +15,11 @@
     z-index: -1;
 }
 .container {
-    margin: 0 auto;
     width: 100%;
-    padding: 0 5%;
-    max-width: 1500px;
+    margin: 0 auto;
+
+    max-width: 133rem;
+    padding: 0 2.5rem;
 }
 .header {
     object-fit: scale-down;
@@ -36,27 +37,28 @@
     flex-direction: column;
     gap: 10px;
 
-    padding: 5% 5%;
+    padding: 2.5rem 2.5rem;
 
     height: 100%;
     width: 60%;
 }
 .leftBlock h2 {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: var(--h4-size);
+    font-weight: 500;
 }
 .leftBlock h1 {
-    font-size: 42px;
+    font-size: var(--h1-size);
 }
 .leftBlock p {
-    color: rgba(0,0,0,0.6);
+    color: var(--text-gray);
+    font-size: var(--p-size);
 }
 .leftBlock a {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 18px;
+    font-size: var(--p-size);
     font-weight: 600;
 
     margin-top: 40px;
@@ -75,7 +77,7 @@
     align-items: center;
     gap: 40px;
 
-    padding: 5% 0;
+    padding: 2.5rem 0;
 
     height: 100%;
     width: 40%;
@@ -94,7 +96,8 @@
     gap: 10px;
 }
 .whyElemText p {
-    color: rgba(0,0,0,0.6);
+    color: var(--text-gray);
+    font-size: var(--p-size);
 }
 .whyElem img {
     object-fit: scale-down;
@@ -114,9 +117,6 @@
         text-align: center;
         align-items: center;
         padding: 40px;
-    }
-    .leftBlock h1 {
-        font-size: 34px;
     }
     .rightBlock {
         width: 100%;
@@ -139,5 +139,22 @@
 @media (max-width: 980px) {
     .wheels {
         display: none;
+    }
+    .whyUsText {
+        gap: 0;
+    }
+    .leftBlock {
+        padding: 2.5rem 2.5rem;
+    }
+    .leftBlock h1 {
+        font-size: 36px;
+    }
+    .rightBlock {
+        gap: 20px;
+    }
+    .whyElem {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
     }
 }

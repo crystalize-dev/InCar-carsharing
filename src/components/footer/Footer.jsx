@@ -9,7 +9,7 @@ const Footer = ({id}) => {
         <footer id={id} className={cl.footer}>
             <div className={cl.cutter}>
                 <div className={cl.block}>
-                    <h1><span>In</span>Car</h1>
+                    <h3><span>In</span>Car</h3>
                     <p>We offers a big range of vehicles for all your driving needs. We have the perfect car to meet your
                         needs</p>
 
@@ -17,7 +17,7 @@ const Footer = ({id}) => {
                     <a href={"mailto:incar@gmail.com"} className={cl.contactElem}><Icon>mail</Icon>incar@gmail.com</a>
                 </div>
                 <div className={cl.block}>
-                    <h1>COMPANY</h1>
+                    <h3>COMPANY</h3>
                     <div className={cl.compInfo}>Moscow</div>
                     <div className={cl.compInfo}>Careers</div>
                     <div className={cl.compInfo}>Mobile</div>
@@ -28,13 +28,13 @@ const Footer = ({id}) => {
 
             <div className={cl.cutter}>
                 <div className={cl.block}>
-                    <h1>WORKING HOURS</h1>
+                    <h3>WORKING HOURS</h3>
                     <p>Mon - Fri: 9:00AM - 9:00PM</p>
                     <p>Sat: 9:00AM - 19:00PM</p>
                     <p>Sun: Closed</p>
                 </div>
                 <form className={cl.block} onSubmit={e => e.preventDefault()}>
-                    <h1>SUBSCRIPTION</h1>
+                    <h3>SUBSCRIPTION</h3>
                     <p>Subscribe your Email address for latest news & updates</p>
                     <MyInput type={"email"} name={"connection"} placeholder={"Enter Email Address"}/>
                     <button>Submit</button>

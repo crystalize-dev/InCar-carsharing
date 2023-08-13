@@ -28,7 +28,7 @@ export const teamInfo = [
     },
     {
         fullName: "Caitlyn Hunt",
-        role: "Menager",
+        role: "Manager",
         img: teamPhotos.caitlyn,
     },
 ]
