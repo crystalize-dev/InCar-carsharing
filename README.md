@@ -1,6 +1,6 @@
 <div align='center'>
 <h1><span style="color: #fd4c31">In</span>Car</h1>
-<img alt="" style="width:50px" src='./public/logoRound.png'/>
+<img alt="" style="width:100px" src='./public/logoRound.png'/>
 </div>
 <h2>About the project</h2>
 
