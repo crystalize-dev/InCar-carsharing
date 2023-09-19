@@ -10,13 +10,12 @@ import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
 import Models from "../pages/Models/Models";
 import Team from "../pages/Team/Team";
-import RouteWrapper from "../components/routeWrapper/routeWrapper";
+import RouteWrapper from "../pages/routeWrapper/routeWrapper";
 import TestimonialsPage from "../pages/Testimonials/TestimonialsPage";
 
 
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<MainWrapper />}>
-
         <Route index element={<Guest />} />
 
         <Route element={<RouteWrapper />}>

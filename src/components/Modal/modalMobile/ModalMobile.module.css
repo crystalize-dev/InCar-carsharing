@@ -33,6 +33,9 @@
     font-size: var(--h4-size);
     font-weight: 500;
 }
+.langSwitcher {
+    font-size: 2.4rem;
+}
 
 @media (max-width: 1200px) {
     .modalMobile {

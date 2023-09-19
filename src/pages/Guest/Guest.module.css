@@ -34,6 +34,8 @@
     height: 300px;
     gap: 20px;
 
+    padding: 40px;
+
     color: white;
     text-align: center;
 
@@ -61,6 +63,9 @@
     }
 }
 @media (max-width: 980px) {
+    .delimiter {
+        height: fit-content;
+    }
     .delimiter h1 {
         font-size: var(--h2-size);
     }

@@ -5,7 +5,7 @@
     margin-top: 40px;
 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
 }
 .infoArea img {
@@ -20,6 +20,8 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+
+    max-width: 33.3%;
 }
 .planElem h1 {
     font-size: var(--h3-size);
@@ -35,6 +37,9 @@
     .infoArea {
         margin-top: 0;
         flex-direction: column;
+    }
+    .planElem {
+        max-width: unset;
     }
     .planElem p {
         max-width: 100%;

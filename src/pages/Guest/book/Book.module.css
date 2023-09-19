@@ -77,9 +77,11 @@
     border-radius: 5px;
     color: rgba(0,0,0,0.3);
     background-color: transparent;
+
+    cursor: pointer;
 }
 .bookElem select option:nth-child(1) {
-    color: rgba(0,0,0,0.2);
+    color: rgba(0,0,0,0.5);
 }
 .bookElem select option:not(:nth-child(1)) {
     color: black;
@@ -319,6 +321,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 3rem;
 
     width: 100%;
     height: 50px;
@@ -339,6 +342,7 @@
 
     background-color: var(--accent-color);
     color: white;
+    white-space: nowrap;
 
     cursor: pointer;
 }
@@ -347,6 +351,9 @@
 @media (max-width: 980px) {
     .book:target {
         scroll-margin-top: 10px;
+    }
+    .book form > h1 {
+        font-size: 2rem;
     }
     .row {
         flex-direction: column;
@@ -370,6 +377,9 @@
         width: 100%;
         --window-height: 100%;
         --header2-height: 0px;
+    }
+    .modalHeader {
+        font-size: 0.8rem;
     }
     .modalHeaderNotification {
         display: none;
@@ -396,6 +406,8 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
+
+        margin-bottom: 20px;
     }
     .submit input + label {
         font-size: 12px;

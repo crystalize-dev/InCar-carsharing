@@ -67,7 +67,7 @@
     align-items: center;
     gap: 10px;
 
-    font-size: var(--h2-size);
+    font-size: var(--h3-size);
     font-weight: bold;
     font-variation-settings: 'wght' 800, 'FILL' 1;
 }
@@ -90,10 +90,6 @@
         flex-direction: column;
         text-align: center;
     }
-
-    .footer p, .footer span {
-        font-size: var(--h3-size);
-    }
 }
 @media (max-width: 980px) {
     .header {
@@ -111,5 +107,9 @@
     }
     .header a:hover {
         color: black;
+    }
+
+    .footer p, .footer span {
+        font-size: var(--h4-size);
     }
 }

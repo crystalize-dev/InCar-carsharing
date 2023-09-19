@@ -3,9 +3,12 @@ import cl from "./Header.module.css"
 import {images} from "../../img/Guest/img";
 import Icon from "../Icon/icon";
 import {Link} from "react-router-dom";
+import LangSwitcher from "../LangSwitcher/LangSwitcher";
+import {useTranslation} from "i18nano";
 
 
 const Header = ({id, header, setMenu, setModal, setType}) => {
+    const text = useTranslation()
 
     const openForm = (type) => {
         setModal(true)
@@ -13,25 +16,31 @@ const Header = ({id, header, setMenu, setModal, setType}) => {
     }
 
     return (
-        <header id={id} ref={header} className={cl.header}>
-            <img alt="logo" src={images.logo} draggable={false}/>
+        <>
+            <header id={id} className={cl.langHeader}>
+                <LangSwitcher />
+            </header>
 
-            <div className={cl.navigation}>
-                <Link to={"/"}>Home</Link>
-                <Link to={"about"}>About</Link>
-                <Link to={"models"}>Models</Link>
-                <Link to={"testimonials"}>Testimonials</Link>
-                <Link to={"team"}>Our team</Link>
-                <Link to={"contact"}>Contact</Link>
-            </div>
+            <header ref={header} className={cl.header}>
+                <img alt="logo" src={images.logo} draggable={false}/>
 
-            <div className={cl.btnsArea}>
-                <Icon onClick={() => setMenu(true)}>menu</Icon>
+                <div className={cl.navigation}>
+                    <Link to={"/"}>{text('header.links.home')}</Link>
+                    <Link to={"about"}>{text('header.links.about')}</Link>
+                    <Link to={"models"}>{text('header.links.models')}</Link>
+                    <Link to={"testimonials"}>{text('header.links.test')}</Link>
+                    <Link to={"team"}>{text('header.links.team')}</Link>
+                    <Link to={"contact"}>{text('header.links.contact')}</Link>
+                </div>
 
-                <button onClick={() => openForm('login')}>Sign In</button>
-                <button onClick={() => openForm('register')}>Register</button>
-            </div>
-        </header>
+                <div className={cl.btnsArea}>
+                    <Icon onClick={() => setMenu(true)}>menu</Icon>
+
+                    <button onClick={() => openForm('login')}>{text('header.button.log')}</button>
+                    <button onClick={() => openForm('register')}>{text('header.button.reg')}</button>
+                </div>
+            </header>
+        </>
     );
 };
 

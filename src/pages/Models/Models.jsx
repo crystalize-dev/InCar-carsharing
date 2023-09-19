@@ -1,7 +1,8 @@
 import React from 'react';
 import cl from "./Models.module.css"
-import {carsInfo} from "../../utility/hardcode/carsInfo";
+import {carsInfo} from "../../hardcode/carsInfo";
 import ModelCard from "../../components/Cards/modelCard/modelCard";
+
 
 const Models = () => {
     return (

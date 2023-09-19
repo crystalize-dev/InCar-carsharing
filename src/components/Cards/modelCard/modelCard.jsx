@@ -2,9 +2,12 @@ import React from 'react';
 import cl from "./modelCard.module.css"
 import Icon from "../../Icon/icon";
 import {useNavigate} from "react-router-dom"
+import {useTranslation, useTranslationChange} from "i18nano";
 
 
 const ModelCard = ({src, cost, model, doors, transmission, gas}) => {
+    const text = useTranslation()
+    const lang = useTranslationChange().lang
 
     const navigate = useNavigate()
 
@@ -20,7 +23,7 @@ const ModelCard = ({src, cost, model, doors, transmission, gas}) => {
 
                 <div className={cl.price}>
                     <h1>${cost}</h1>
-                    <p>per day</p>
+                    <p>{text('models.rent')}</p>
                 </div>
             </div>
 
@@ -39,11 +42,11 @@ const ModelCard = ({src, cost, model, doors, transmission, gas}) => {
             <div className={cl.row}>
                 <div>
                     <Icon>settings</Icon>
-                    <p>{transmission}</p>
+                    <p>{lang === 'ru' ? transmission.ru : transmission.en}</p>
                 </div>
 
                 <div>
-                    <p>{gas}</p>
+                    <p>{lang === 'ru' ? gas.ru :  gas.en}</p>
                     <Icon>local_gas_station</Icon>
                 </div>
             </div>

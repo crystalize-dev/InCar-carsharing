@@ -1,5 +1,5 @@
 import {cars} from "../img/Guest/cars/cars";
-import {carsInfo} from "./hardcode/carsInfo";
+import {carsInfo} from "../hardcode/carsInfo";
 
 
 export const getCar = (car) => {

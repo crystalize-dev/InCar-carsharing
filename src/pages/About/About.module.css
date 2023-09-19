@@ -51,6 +51,8 @@
     align-items: center;
 
     gap: 20px;
+
+    max-width: 30%;
 }
 .optionsElem p {
     display: flex;
@@ -94,5 +96,8 @@
         width:  60px;
         height: 60px;
         object-fit: scale-down;
+    }
+    .optionsElem p {
+        flex-direction: column;
     }
 }

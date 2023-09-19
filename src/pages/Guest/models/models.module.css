@@ -120,6 +120,7 @@
 
     font-size: var(--p-size);
     font-weight: 600;
+    text-transform: uppercase;
 
     width: 350px;
     height: 60px;

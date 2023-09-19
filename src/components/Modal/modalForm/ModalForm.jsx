@@ -4,11 +4,13 @@ import classnames from "classnames";
 import {loginVia} from "../../../img/ModalForm/loginVia";
 import MyInput from "../../Inputs/input/MyInput";
 import Icon from "../../Icon/icon";
+import {useTranslation} from "i18nano";
 
 
 const ModalForm = ({modal, setModal, type, setType}) => {
-
     const [notification, setNotification] = useState("-1")
+
+    const text = useTranslation()
 
     const submit = (e) => {
         e.preventDefault()
@@ -17,7 +19,7 @@ const ModalForm = ({modal, setModal, type, setType}) => {
     }
 
     const sendNotification = async () => {
-        setNotification('Email send!')
+        setNotification(text('modal.notification'))
 
         await new Promise(resolve => setTimeout(resolve, 5000));
 
@@ -33,23 +35,25 @@ const ModalForm = ({modal, setModal, type, setType}) => {
             <form className={cl.window} onMouseDown={e => e.stopPropagation()} onSubmit={e => submit(e)}>
                 <Icon className={cl.close} onClick={() => setModal(false)}>close</Icon>
 
-                <h1>{type === 'login' ? "Sign in" : "Register"}</h1>
+                <h1>{type === 'login' ? text('modal.type.log') : text('modal.type.reg')}</h1>
 
-                <MyInput name={'login'} placeholder={"Enter email"} type={"text"} icon={"mail"}/>
-                <MyInput name={'password'} placeholder={"Enter password"} type={"password"} autocomplete={"off"}/>
+                <MyInput name={'login'} placeholder={text('modal.input.email')} type={"text"} icon={"mail"}/>
+                <MyInput name={'password'} placeholder={text('modal.input.pass')} type={"password"} autocomplete={"off"}/>
                 {type === 'register' &&
-                    <MyInput name={'passwordRepeat'} placeholder={"Repeat password"} type={"password"}
+                    <MyInput name={'passwordRepeat'} placeholder={text('modal.input.passr')} type={"password"}
                                      icon={null} autocomplete={"off"}/>}
 
                 {type === 'login' &&
                     <div className={cl.forgot}>
                         <p className={notification === '-1' ? classnames(cl.notification, cl.hide) : cl.notification}>{notification}</p>
-                        <p onClick={() => sendNotification()}>Forgot password?</p>
+                        <p onClick={() => sendNotification()}>{text('modal.forgot')}</p>
                     </div>}
 
-                <button type={"submit"}>Submit</button>
+                <button type={"submit"}>{text('modal.button')}</button>
 
-                <p className={cl.textDel}>Or {type === 'login' ? "sign in" : "register"} using</p>
+                <p className={cl.textDel}>
+                    {text('modal.alt', type === 'login' ? {type: text('modal.type.log')} : {type: text('modal.type.reg')})}
+                </p>
                 <div className={cl.other}>
                     <a href={"https://google.com"} target="_blank" rel="noreferrer"> <img alt={"google"}
                                                                                           src={loginVia.google}
@@ -62,8 +66,8 @@ const ModalForm = ({modal, setModal, type, setType}) => {
                                                                                             draggable={false}/> </a>
                 </div>
 
-                <p className={cl.switch}>{type === 'login' ? "Don't" : "Already"} have an account?<span
-                    onClick={() => switchType()}>{type === 'login' ? "Register" : 'Sign in'}</span></p>
+                <p className={cl.switch}>{type === 'login' ? text('modal.dont') : text('modal.already')} {text('modal.acc')}<span
+                    onClick={() => switchType()}>{type === 'login' ? text('modal.type.reg') : text('modal.type.log')}</span></p>
             </form>
         </div>
     );

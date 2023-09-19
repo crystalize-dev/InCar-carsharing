@@ -1,4 +1,6 @@
 import React, {useEffect} from 'react';
+import {useSearchParams} from "react-router-dom";
+import {useTranslation} from "i18nano";
 import cl from "./Guest.module.css"
 
 import {images} from "../../img/Guest/img";
@@ -10,11 +12,11 @@ import WhyUs from "./why/WhyUs";
 import Testimonials from "./testimonials/Testimonials";
 import Faq from "./faq/Faq";
 import App from "./app/App";
-import {useSearchParams} from "react-router-dom";
 
 
 const Guest = () => {
     const params = useSearchParams()
+    const text = useTranslation()
 
     useEffect(() => {
         let header = document.getElementById('book')
@@ -35,8 +37,8 @@ const Guest = () => {
             </div>
 
             <div className={cl.delimiter}>
-                <h1>Save big with our cheap car rental!</h1>
-                <h2>Top Airports. Local Suppliers. <span>24/7</span> Support</h2>
+                <h1>{text('delimiter.h1')}</h1>
+                <h2>{text('delimiter.h2')}<span>24/7</span>{text('delimiter.h2.after')}</h2>
             </div>
 
             <WhyUs id={"why"}/>

@@ -30,9 +30,10 @@ button, input {
     --h3-size: 2.4rem;
     --h4-size: 2.2rem;
     --p-size: 1.6rem;
+
     --input-size: 1.4rem;
 
-    --padding-btn: 1rem 3rem;
+    --padding-btn: 1.3rem 3rem;
 
     --transition-fast: all 0.15s ease 0s;
     --transition-slow: all 0.3s ease 0s;
@@ -40,6 +41,7 @@ button, input {
 
 html {
     font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body {

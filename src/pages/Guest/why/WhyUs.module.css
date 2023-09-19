@@ -47,7 +47,7 @@
     font-weight: 500;
 }
 .leftBlock h1 {
-    font-size: var(--h1-size);
+    font-size: var(--h2-size);
 }
 .leftBlock p {
     color: var(--text-gray);
@@ -94,6 +94,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.whyElemText h1 {
+    font-size: var(--h4-size);
 }
 .whyElemText p {
     color: var(--text-gray);
@@ -144,10 +147,10 @@
         gap: 0;
     }
     .leftBlock {
-        padding: 2.5rem 2.5rem;
+        padding: 1rem 1rem;
     }
     .leftBlock h1 {
-        font-size: 36px;
+        font-size: 2.6rem;
     }
     .rightBlock {
         gap: 20px;

@@ -1,15 +1,17 @@
 import React from 'react';
 import cl from "./App.module.css"
 import {images} from "../../../img/Guest/img";
+import {useTranslation} from "i18nano";
 
 
 const App = ({id}) => {
+    const text = useTranslation()
+
     return (
         <section id={id} className={cl.app}>
             <div className={cl.textArea}>
-                <h1>Download our app to get most out of it</h1>
-                <p>Thrown shy denote ten ladies though ask saw. Or by to he going think order event music. Incommode so
-                    intention defective at convinced. Led income months itself and houses you.</p>
+                <h1>{text('app.h1')}</h1>
+                <p>{text('app.p')}</p>
 
                 <div className={cl.btnArea}>
                     <a href={"#google"}><img alt={"google"} src={images.google} draggable={false}/></a>
