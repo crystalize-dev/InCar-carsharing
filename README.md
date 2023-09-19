@@ -12,6 +12,8 @@
 
 » React-router-dom v6
 
+» localization (i18nano)
+
 <h2>Screenshots of the Project 📸</h2>
 <h3 align='center'>Home Page 🏡</h3>
 
