@@ -4,7 +4,7 @@ import classNames from "classnames";
 import {useTranslation, useTranslationChange} from "i18nano";
 
 
-const LangSwitcher = ({className, text}) => {
+const LangSwitcher = ({className, text=false}) => {
     const lang = useTranslationChange()
     const localText = useTranslation()
 
