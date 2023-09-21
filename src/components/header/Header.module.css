@@ -28,6 +28,10 @@
     max-width: 133rem;
     padding: 2.7rem 2rem;
 }
+.header > a {
+    display: flex;
+    align-items: center;
+}
 .header img {
     width: 20rem;
 }

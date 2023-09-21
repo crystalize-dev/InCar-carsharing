@@ -137,4 +137,7 @@
         padding: 1rem 2rem;
         font-size: var(--input-size);
     }
+    .homeBtns {
+        flex-direction: column;
+    }
 }

@@ -20,7 +20,7 @@ const ModalMobile = ({menu, setMenu, setModal, setType}) => {
         <div className={menu ? classnames(cl.modalMobile, cl.show) : cl.modalMobile}>
             <Icon onClick={() => setMenu(false)}>close</Icon>
 
-            <LangSwitcher className={cl.langSwitcher}/>
+            <LangSwitcher text={true}/>
 
             <Link onClick={() => setMenu(false)} to={"/"}>{text('header.links.home')}</Link>
             <Link onClick={() => setMenu(false)} to={"about"}>{text('header.links.about')}</Link>

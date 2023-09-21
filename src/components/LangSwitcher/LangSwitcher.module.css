@@ -1,5 +1,12 @@
 .lang {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
     color: black;
     font-size: 1.8rem;
     cursor: pointer;
+}
+.underline:hover {
+    text-decoration: underline;
 }

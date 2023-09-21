@@ -17,9 +17,9 @@ const Home = ({id}) => {
                 <p>{text('home.p')}</p>
                 <div className={cl.homeBtns}>
                     <a href={"#book"}>
-                        <button>Book Ride <Icon>check_circle</Icon></button>
+                        <button>{text('home.button.book')} <Icon>check_circle</Icon></button>
                     </a>
-                        <Link to="about">Learn More<Icon>chevron_right</Icon></Link>
+                        <Link to="about">{text('home.button.more')}<Icon>chevron_right</Icon></Link>
                 </div>
             </div>
 

@@ -97,7 +97,7 @@ const Book = ({id}) => {
                                 <h1> {text('book.drop-off')} <span>*</span></h1>
                             </div>
 
-                            <MySelect name={"drop-of"} defaultValue={"book.drop-off.select"}>
+                            <MySelect name={"drop-of"} defaultValue={text("book.drop-off.select")}>
                                 <option>{text('moscow')}</option>
                                 <option>{text('spb')}</option>
                                 <option>{text('tver')}</option>

@@ -1,4 +1,7 @@
 {
+  "lang": "Language",
+  "langName": "English",
+
   "header.links.home": "Home",
   "header.links.about": "About",
   "header.links.models": "Models",
@@ -26,6 +29,8 @@
   "home.h1.colored": "big",
   "home.h1.after": " with our car rental",
   "home.p": "Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more",
+  "home.button.book": "Book Ride ",
+  "home.button.more": "Learn More ",
 
   "delimiter.h1": "Save big with our cheap car rental!",
   "delimiter.h2": "Top Airports. Local Suppliers. ",

@@ -1,19 +1,30 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import cl from "./LangSwitcher.module.css"
-import {useTranslationChange} from "i18nano";
-import classnames from "classnames";
+import classNames from "classnames";
+import {useTranslation, useTranslationChange} from "i18nano";
 
 
-const LangSwitcher = ({className}) => {
+const LangSwitcher = ({className, text}) => {
     const lang = useTranslationChange()
+    const localText = useTranslation()
+
+    useEffect(() => {
+        if (!lang.lang) lang.change(localStorage.getItem('lang'))
+    })
+
+    useEffect(() => {
+        localStorage.setItem('lang', lang.lang)
+    }, [lang.lang])
 
     const switchLang = () => {
-        lang.lang === 'ru' ? lang.change('en') : lang.change('ru')
+        lang.change(lang.lang === 'ru' ? "en" :  "ru")
     }
 
     return (
-        <p className={classnames(cl.lang, className)} onClick={switchLang}>
-            {lang.lang}
+        <p className={classNames(cl.lang, className)} onClick={switchLang}>
+            {text ? localText('lang') + ": " : null}
+
+            <span className={text ? cl.underline : null}>{text ? localText('langName') : lang.lang}</span>
         </p>
     );
 };

@@ -8,6 +8,7 @@ import {useTranslation} from "i18nano";
 
 
 const Header = ({id, header, setMenu, setModal, setType}) => {
+
     const text = useTranslation()
 
     const openForm = (type) => {
@@ -22,7 +23,7 @@ const Header = ({id, header, setMenu, setModal, setType}) => {
             </header>
 
             <header ref={header} className={cl.header}>
-                <img alt="logo" src={images.logo} draggable={false}/>
+                <Link to={"/"}><img alt="logo" src={images.logo} draggable={false}/></Link>
 
                 <div className={cl.navigation}>
                     <Link to={"/"}>{text('header.links.home')}</Link>

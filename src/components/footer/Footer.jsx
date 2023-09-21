@@ -36,10 +36,10 @@ const Footer = ({id}) => {
                     <p>{text('footer.time.sun')}</p>
                 </div>
                 <form className={cl.block} onSubmit={e => e.preventDefault()}>
-                    <h3>SUBSCRIPTION</h3>
-                    <p>Subscribe your Email address for latest news & updates</p>
-                    <MyInput type={"email"} name={"connection"} placeholder={"Enter Email Address"}/>
-                    <button>Submit</button>
+                    <h3>{text('footer.sub.header')}</h3>
+                    <p>{text('footer.sub.p')}</p>
+                    <MyInput type={"email"} name={"connection"} placeholder={text('footer.sub.input')}/>
+                    <button>{text('footer.sub.submit')}</button>
                 </form>
             </div>
         </footer>
