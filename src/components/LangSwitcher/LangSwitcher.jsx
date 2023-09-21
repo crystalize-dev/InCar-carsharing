@@ -9,12 +9,13 @@ const LangSwitcher = ({className, text=false}) => {
     const localText = useTranslation()
 
     useEffect(() => {
-        if (!lang.lang) lang.change(localStorage.getItem('lang'))
-    })
+        if (!lang.lang) {
+            let language = localStorage.getItem('lang')
 
-    useEffect(() => {
-        localStorage.setItem('lang', lang.lang)
-    }, [lang.lang])
+            if (language) lang.change(language)
+            else lang.change('ru')
+        } else localStorage.setItem('lang', lang.lang)
+    }, [lang, lang.lang])
 
     const switchLang = () => {
         lang.change(lang.lang === 'ru' ? "en" :  "ru")
@@ -24,7 +25,7 @@ const LangSwitcher = ({className, text=false}) => {
         <p className={classNames(cl.lang, className)} onClick={switchLang}>
             {text ? localText('lang') + ": " : null}
 
-            <span className={text ? cl.underline : null}>{text ? localText('langName') : lang.lang}</span>
+            <span className={text ? cl.underline : null}>{!lang.lang ? "ru" : text ? localText('langName') : lang.lang}</span>
         </p>
     );
 };
