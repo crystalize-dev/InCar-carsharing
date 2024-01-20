@@ -1,4 +1,6 @@
 .langHeader {
+    position: absolute;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,10 +11,9 @@
 
     background-color: transparent;
 
-    margin: 10px auto 0 auto;
-    max-width: 133rem;
-    padding: 2rem 2rem;
+    padding: 2rem;
 }
+
 .header {
     display: flex;
     align-items: center;
@@ -27,6 +28,7 @@
     margin: 0 auto;
     max-width: 133rem;
     padding: 2.7rem 2rem;
+    border-radius: 8px 8px 8px 8px;
 }
 .header > a {
     display: flex;
@@ -56,13 +58,15 @@
     font-size: var(--p-size);
 
     text-decoration: none;
-    transition: var(--transition-fast);
+    transition: var(--transition-slow);
     font-weight: 600;
 
     cursor: pointer;
+    border-bottom: 2px solid transparent;
 }
 .navigation a:hover {
     color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 .btnsArea button {
     padding: var(--padding-btn);

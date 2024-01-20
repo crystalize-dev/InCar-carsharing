@@ -6,6 +6,8 @@
     color: black;
     font-size: 1.8rem;
     cursor: pointer;
+    text-transform: capitalize;
+    user-select: none;
 }
 .underline:hover {
     text-decoration: underline;

@@ -75,11 +75,17 @@
 
     border-radius: 5px;
     border: none;
-    outline: none;
+    outline: 2px solid transparent;
     box-shadow: var(--box-shadow);
 
     font-size: var(--p-size);
     font-weight: 600;
+    transition: var(--transition-slow);
+}
+.block button:hover {
+    background: transparent;
+    outline-color: var(--accent-color);
+    color: var(--accent-color);
 }
 .cutter {
     display: flex;

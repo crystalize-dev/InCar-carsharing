@@ -103,10 +103,10 @@
 .price a:before {
     position: absolute;
     content: "";
-    left: 5px;
-    top: 5px;
-    bottom: -5px;
-    right: -5px;
+    left: 8px;
+    top: 8px;
+    bottom: -8px;
+    right: -8px;
 
     background-color: #ede7e8;
     z-index: -1;
@@ -121,12 +121,19 @@
     font-size: var(--p-size);
     font-weight: 600;
     text-transform: uppercase;
+    border: 2px solid transparent;
 
     width: 350px;
     height: 60px;
 
     color: white;
     background-color: var(--accent-color);
+    transition: var(--transition-slow);
+}
+.price a:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background: white;
 }
 
 

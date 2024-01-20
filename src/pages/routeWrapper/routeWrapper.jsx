@@ -41,7 +41,7 @@ const RouteWrapper = () => {
                 <img alt={"carRoof"} src={carRoof} draggable={false}/>
 
                 <p>{text("routing.delimiter.header")}</p>
-                <p><Icon>call</Icon> +7 (123) 456-7869</p>
+                <a href={"tel:71234567869"}><p><Icon>call</Icon> +7 (123) 456-7869</p></a>
             </div>
         </>
     );

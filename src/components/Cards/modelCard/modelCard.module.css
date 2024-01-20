@@ -70,10 +70,17 @@
     
     border: none;
     background-color: var(--accent-color);
+    outline: 2px solid transparent;
     color: white;
     box-shadow: var(--box-shadow);
     font-weight: bold;
     font-size: var(--p-size);
+    transition: var(--transition-slow);
 
     cursor: pointer;
+}
+.card button:hover {
+    outline-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: transparent;
 }

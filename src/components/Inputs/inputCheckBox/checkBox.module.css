@@ -26,6 +26,7 @@
 
     font-size: var(--label-font-size);
     color: var(--box-color);
+    cursor: pointer;
 }
 .customCheckBox + label::before {
     content: '';

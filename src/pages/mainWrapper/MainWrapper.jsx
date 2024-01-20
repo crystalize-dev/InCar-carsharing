@@ -1,7 +1,7 @@
 import Header from "../../components/header/Header";
 import ModalMobile from "../../components/Modal/modalMobile/ModalMobile";
 import {useInView} from "react-intersection-observer";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import cl from "./mainWrapper.module.css"
 import classnames from "classnames";
 import Icon from "../../components/Icon/icon";
@@ -34,7 +34,7 @@ const MainWrapper = () => {
 
                 <ModalMobile menu={menu} setMenu={setMenu} setModal={setModal} setType={setType}/>
 
-                <ModalForm setModal={setModal} modal={modal} type={type} setType={setType} />
+                <ModalForm setModal={setModal} modal={modal} type={type} setType={setType}/>
 
                 <Outlet/>
 

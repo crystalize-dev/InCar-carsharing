@@ -51,9 +51,11 @@ const ModalForm = ({modal, setModal, type, setType}) => {
 
                 <button type={"submit"}>{text('modal.button')}</button>
 
-                <p className={cl.textDel}>
-                    {text('modal.alt', type === 'login' ? {type: text('modal.type.log')} : {type: text('modal.type.reg')})}
-                </p>
+                <div className={cl.textDel}>
+                    <hr/>
+                    <p>{text("modal.alt")}</p>
+                </div>
+
                 <div className={cl.other}>
                     <a href={"https://google.com"} target="_blank" rel="noreferrer"> <img alt={"google"}
                                                                                           src={loginVia.google}

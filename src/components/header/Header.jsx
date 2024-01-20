@@ -3,8 +3,8 @@ import cl from "./Header.module.css"
 import {images} from "../../img/Guest/img";
 import Icon from "../Icon/icon";
 import {Link} from "react-router-dom";
-import LangSwitcher from "../LangSwitcher/LangSwitcher";
 import {useTranslation} from "i18nano";
+import LangSwitcher from "../LangSwitcher/LangSwitcher";
 
 
 const Header = ({id, header, setMenu, setModal, setType}) => {
@@ -18,11 +18,11 @@ const Header = ({id, header, setMenu, setModal, setType}) => {
 
     return (
         <>
-            <header id={id} className={cl.langHeader}>
-                <LangSwitcher />
+            <header className={cl.langHeader}>
+                <LangSwitcher/>
             </header>
 
-            <header ref={header} className={cl.header}>
+            <header ref={header} className={cl.header} id={id}>
                 <Link to={"/"}><img alt="logo" src={images.logo} draggable={false}/></Link>
 
                 <div className={cl.navigation}>

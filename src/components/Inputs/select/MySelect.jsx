@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import cl from "./MySelect.module.css"
+import classnames from "classnames";
 
 
 const MySelect = ({children, defaultValue="Select option", name}) => {
@@ -14,7 +15,7 @@ const MySelect = ({children, defaultValue="Select option", name}) => {
     }
 
     return (
-        <select name={name} className={active ? cl.active : null} onChange={e => changeActive(e)} value={value}>
+        <select name={name} className={active ? classnames(cl.active, cl.input) : cl.input} onChange={e => changeActive(e)} value={value}>
             <option disabled>{defaultValue}</option>
             {children}
         </select>

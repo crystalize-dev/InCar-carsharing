@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import cl from "./textArea.module.css"
+import classnames from "classnames";
 
 
 const MyTextArea = ({name, placeholder}) => {
@@ -21,7 +22,7 @@ const MyTextArea = ({name, placeholder}) => {
                   name={name}
                   value={value}
                   onChange={e => changeActive(e)}
-                  className={active ? cl.active : null}/>
+                  className={active ? classnames(cl.active, cl.input) : cl.input}/>
     );
 };
 

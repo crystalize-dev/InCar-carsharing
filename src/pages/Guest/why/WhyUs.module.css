@@ -69,7 +69,14 @@
     box-shadow: var(--box-shadow);
     background-color: var(--accent-color);
     border-radius: 5px;
+    outline: 2px solid transparent;
     color: white;
+    transition: var(--transition-slow);
+}
+.leftBlock a:hover {
+    outline-color: var(--accent-color);
+    color: var(--accent-color);
+    background: transparent;
 }
 .rightBlock {
     display: flex;

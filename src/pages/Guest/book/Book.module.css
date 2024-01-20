@@ -61,19 +61,26 @@
 
     background-color: var(--accent-color);
     box-shadow: var(--box-shadow);
+    outline: 2px solid transparent;
     border: none;
     color: white;
     font-size: var(--p-size);
     font-weight: 600;
 
     cursor: pointer;
+    transition: var(--transition-slow);
+}
+.row button:hover {
+    background: transparent;
+    outline-color: var(--accent-color);
+    color: var(--accent-color);
 }
 .bookElem select, .bookElem input {
     padding: 1rem 2rem;
     height: 50px;
     outline: none;
 
-    border: 1px solid rgba(0,0,0,0.3);
+    border: 2px solid rgba(0,0,0,0.3);
     border-radius: 5px;
     color: rgba(0,0,0,0.3);
     background-color: transparent;

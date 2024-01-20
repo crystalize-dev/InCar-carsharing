@@ -57,13 +57,21 @@
 
     cursor: pointer;
     color: white;
+    outline: 2px solid transparent;
 
     transition: var(--transition-slow);
 }
 .homeBtns button:nth-child(1) {
     background-color: var(--accent-color);
     box-shadow: var(--box-shadow);
+    transition: var(--transition-slow);
 }
+.homeBtns button:nth-child(1):hover {
+    background-color: transparent;
+    outline-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
 .homeBtns a:nth-child(2) {
     padding: 1.5rem 3rem;
 

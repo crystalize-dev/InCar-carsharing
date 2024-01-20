@@ -1,5 +1,16 @@
+.input {
+    border-width: 2px!important;
+    transition: var(--transition-slow);
+}
+.input:hover {
+    border-color: black;
+}
+.input:focus {
+    border-color: var(--accent-color)!important;
+}
+
 .active {
     color: black!important;
-    border: 1px solid black!important;
+    border: 2px solid black!important;
     background-color: transparent !important;
 }
