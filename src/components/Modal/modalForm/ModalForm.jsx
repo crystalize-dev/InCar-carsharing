@@ -5,6 +5,7 @@ import {loginVia} from "../../../img/ModalForm/loginVia";
 import MyInput from "../../Inputs/input/MyInput";
 import Icon from "../../Icon/icon";
 import {useTranslation} from "i18nano";
+import FocusTrap from "focus-trap-react";
 
 
 const ModalForm = ({modal, setModal, type, setType}) => {
@@ -32,45 +33,50 @@ const ModalForm = ({modal, setModal, type, setType}) => {
 
     return (
         <div className={modal ? cl.wrapper : classnames(cl.wrapper, cl.hide)} onMouseDown={() => setModal(false)}>
-            <form className={cl.window} onMouseDown={e => e.stopPropagation()} onSubmit={e => submit(e)}>
-                <Icon className={cl.close} onClick={() => setModal(false)}>close</Icon>
+            {modal && <FocusTrap>
+                <form className={cl.window} onMouseDown={e => e.stopPropagation()} onSubmit={e => submit(e)}>
+                    <Icon className={cl.close} onClick={() => setModal(false)}>close</Icon>
 
-                <h1>{type === 'login' ? text('modal.type.log') : text('modal.type.reg')}</h1>
+                    <h1>{type === 'login' ? text('modal.type.log') : text('modal.type.reg')}</h1>
 
-                <MyInput name={'login'} placeholder={text('modal.input.email')} type={"text"} icon={"mail"}/>
-                <MyInput name={'password'} placeholder={text('modal.input.pass')} type={"password"} autocomplete={"off"}/>
-                {type === 'register' &&
-                    <MyInput name={'passwordRepeat'} placeholder={text('modal.input.passr')} type={"password"}
-                                     icon={null} autocomplete={"off"}/>}
+                    <MyInput name={'login'} placeholder={text('modal.input.email')} type={"text"} icon={"mail"}/>
+                    <MyInput name={'password'} placeholder={text('modal.input.pass')} type={"password"}
+                             autocomplete={"off"}/>
+                    {type === 'register' &&
+                        <MyInput name={'passwordRepeat'} placeholder={text('modal.input.passr')} type={"password"}
+                                 icon={null} autocomplete={"off"}/>}
 
-                {type === 'login' &&
-                    <div className={cl.forgot}>
-                        <p className={notification === '-1' ? classnames(cl.notification, cl.hide) : cl.notification}>{notification}</p>
-                        <p onClick={() => sendNotification()}>{text('modal.forgot')}</p>
-                    </div>}
+                    {type === 'login' &&
+                        <div className={cl.forgot}>
+                            <p className={notification === '-1' ? classnames(cl.notification, cl.hide) : cl.notification}>{notification}</p>
+                            <p onClick={() => sendNotification()}>{text('modal.forgot')}</p>
+                        </div>}
 
-                <button type={"submit"}>{text('modal.button')}</button>
+                    <button type={"submit"}>{text('modal.button')}</button>
 
-                <div className={cl.textDel}>
-                    <hr/>
-                    <p>{text("modal.alt")}</p>
-                </div>
+                    <div className={cl.textDel}>
+                        <hr/>
+                        <p>{text("modal.alt")}</p>
+                    </div>
 
-                <div className={cl.other}>
-                    <a href={"https://google.com"} target="_blank" rel="noreferrer"> <img alt={"google"}
-                                                                                          src={loginVia.google}
+                    <div className={cl.other}>
+                        <a href={"https://google.com"} target="_blank" rel="noreferrer"> <img alt={"google"}
+                                                                                              src={loginVia.google}
+                                                                                              draggable={false}/> </a>
+                        <a href={"https://facebook.com/"} target="_blank" rel="noreferrer"> <img alt={"facebook"}
+                                                                                                 src={loginVia.facebook}
+                                                                                                 draggable={false}/>
+                        </a>
+                        <a href={"https://vk.com"} target="_blank" rel="noreferrer"> <img alt={"vk"}
+                                                                                          src={loginVia.vk}
                                                                                           draggable={false}/> </a>
-                    <a href={"https://facebook.com/"} target="_blank" rel="noreferrer"> <img alt={"facebook"}
-                                                                                             src={loginVia.facebook}
-                                                                                             draggable={false}/> </a>
-                    <a href={"https://vk.com"} target="_blank" rel="noreferrer"> <img alt={"vk"}
-                                                                                            src={loginVia.vk}
-                                                                                            draggable={false}/> </a>
-                </div>
+                    </div>
 
-                <p className={cl.switch}>{type === 'login' ? text('modal.dont') : text('modal.already')} {text('modal.acc')}<span
-                    onClick={() => switchType()}>{type === 'login' ? text('modal.type.reg') : text('modal.type.log')}</span></p>
-            </form>
+                    <p className={cl.switch}>{type === 'login' ? text('modal.dont') : text('modal.already')} {text('modal.acc')}<span
+                        onClick={() => switchType()}>{type === 'login' ? text('modal.type.reg') : text('modal.type.log')}</span>
+                    </p>
+                </form>
+            </FocusTrap>}
         </div>
     );
 };

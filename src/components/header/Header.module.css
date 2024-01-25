@@ -88,8 +88,15 @@
     background-color: var(--accent-color);
     box-shadow: var(--box-shadow);
     border-radius: 3px;
+    outline: 2px solid transparent;
     color: white;
 }
+.btnsArea > *:nth-child(3):hover {
+     background-color: white;
+    outline-color: var(--accent-color);
+     box-shadow: var(--box-shadow);
+     color: var(--accent-color);
+ }
 
 @media (max-width: 1100px) {
     .header span {

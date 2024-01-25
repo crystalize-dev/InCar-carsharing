@@ -5,7 +5,7 @@
     height: fit-content;
     background-image: url("../../../img/Guest/cars/car_red.png");
     background-repeat: no-repeat;
-    background-position: bottom 0 left 0;
+    background-position: top left;
 }
 .container {
     display: flex;

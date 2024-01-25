@@ -10,6 +10,10 @@
     scrollbar-color: #ff4d30 #ffffff;
 }
 
+button:focus {
+    outline-color: black!important;
+}
+
 img, a, button {
     user-select: none;
     text-decoration: none;

@@ -18,18 +18,18 @@ const ModalMobile = ({menu, setMenu, setModal, setType}) => {
 
     return (
         <div className={menu ? classnames(cl.modalMobile, cl.show) : cl.modalMobile}>
-            <Icon onClick={() => setMenu(false)}>close</Icon>
+                        <Icon onClick={() => setMenu(false)}>close</Icon>
 
-            <LangSwitcher text={true}/>
+                        <LangSwitcher text={true}/>s
 
-            <Link onClick={() => setMenu(false)} to={"/"}>{text('header.links.home')}</Link>
-            <Link onClick={() => setMenu(false)} to={"about"}>{text('header.links.about')}</Link>
-            <Link onClick={() => setMenu(false)} to={"models"}>{text('header.links.models')}</Link>
-            <Link onClick={() => setMenu(false)} to={"testimonials"}>{text('header.links.test')}</Link>
-            <Link onClick={() => setMenu(false)} to={"team"}>{text('header.links.team')}</Link>
-            <Link onClick={() => setMenu(false)} to={"contact"}>{text('header.links.contact')}</Link>
+                        <Link onClick={() => setMenu(false)} to={"/"}>{text('header.links.home')}</Link>
+                        <Link onClick={() => setMenu(false)} to={"about"}>{text('header.links.about')}</Link>
+                        <Link onClick={() => setMenu(false)} to={"models"}>{text('header.links.models')}</Link>
+                        <Link onClick={() => setMenu(false)} to={"testimonials"}>{text('header.links.test')}</Link>
+                        <Link onClick={() => setMenu(false)} to={"team"}>{text('header.links.team')}</Link>
+                        <Link onClick={() => setMenu(false)} to={"contact"}>{text('header.links.contact')}</Link>
 
-            <a onClick={() => openModal()} href={"#modal"}>{text('header.button.log')}</a>
+                        <a onClick={() => openModal()} href={"#modal"}>{text('header.button.log')}</a>
         </div>
     );
 };
